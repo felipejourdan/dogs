@@ -5,19 +5,22 @@ import LoginCreate from './LoginCreate';
 import LoginReset from './LoginReset';
 import LoginLost from './LoginLost';
 import { UserContext } from '../../UserContext';
+import styles from './Login.module.css';
 
 export const Login = () => {
   const { login } = React.useContext(UserContext);
 
   if (login === true) return <Navigate to="/conta" />;
   return (
-    <div>
-      <Routes>
-        <Route path="/" element={<LoginForm />} />
-        <Route path="/create" element={<LoginCreate />} />
-        <Route path="/lost" element={<LoginLost />} />
-        <Route path="/reset" element={<LoginReset />} />
-      </Routes>
-    </div>
+    <section className={styles.login}>
+      <div className={styles.forms}>
+        <Routes>
+          <Route path="/" element={<LoginForm />} />
+          <Route path="/signUp" element={<LoginCreate />} />
+          <Route path="/lost" element={<LoginLost />} />
+          <Route path="/reset" element={<LoginReset />} />
+        </Routes>
+      </div>
+    </section>
   );
 };
