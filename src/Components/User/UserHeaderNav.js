@@ -19,7 +19,6 @@ const UserHeaderNav = () => {
   }, [pathname]);
 
   const { matches } = window.matchMedia('(max-width: 40rem)');
-  console.log(matches);
 
   return (
     <>
