@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import PhotoCommentes from './PhotoCommentes';
 import styles from './PhotoContent.module.css';
+
 const PhotoContent = ({ data }) => {
   const { photo, comments } = data;
   return (
@@ -11,12 +12,12 @@ const PhotoContent = ({ data }) => {
       </div>
       <div className={styles.details}>
         <div>
-          <p>
+          <p className={styles.author}>
             <Link to={`/perfil/${photo.author}`}>@{photo.author}</Link>
             <span className={styles.views}>{photo.acessos}</span>
           </p>
           <h1 className="title">
-            <Link to={`/goto/${photo.id}`}>{photo.title}</Link>
+            <Link to={`/photo/${photo.id}`}>{photo.title}</Link>
           </h1>
           <ul className={styles.attributes}>
             <li>{photo.peso} kg</li>
