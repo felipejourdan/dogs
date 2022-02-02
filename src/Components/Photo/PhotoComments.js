@@ -6,20 +6,20 @@ import styles from './PhotoComments.module.css';
 const PhotoCommentes = (props) => {
   const { login } = React.useContext(UserContext);
   const [comments, setComments] = React.useState(() => props.comments);
-
+  console.log(comments);
   return (
-    <div>
-      <ul className={styles.comment}>
+    <>
+      <ul className={styles.comments}>
         {comments.map((comment) => (
           <li key={comment.comment_ID}>
             <b>
-              {comment.comment_author}:<span>{comment.comment_content}</span>
+              {comment.comment_author}: <span>{comment.comment_content}</span>
             </b>
           </li>
         ))}
       </ul>
-      {login && <PhotoCommentsForm id={props.id} />}
-    </div>
+      {login && <PhotoCommentsForm id={props.id} setComments={setComments} />}
+    </>
   );
 };
 
