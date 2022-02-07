@@ -6,10 +6,16 @@ import styles from './PhotoComments.module.css';
 const PhotoCommentes = (props) => {
   const { login } = React.useContext(UserContext);
   const [comments, setComments] = React.useState(() => props.comments);
+  const commentsSection = React.useRef(null);
+
+  React.useEffect(() => {
+    commentsSection.current.scrollTop = commentsSection.current.scrollHeight;
+  }, [comments]);
+
   console.log(comments);
   return (
     <>
-      <ul className={styles.comments}>
+      <ul className={styles.comments} ref={commentsSection}>
         {comments.map((comment) => (
           <li key={comment.comment_ID}>
             <b>
