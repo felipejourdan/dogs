@@ -23,7 +23,6 @@ const LoginCreate = () => {
       password: password.value,
     });
     const { response, json } = await request(url, options);
-    console.log(response);
     if (response.ok) userLogin(username.value, password.value);
   }
   return (
