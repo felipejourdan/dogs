@@ -1,7 +1,7 @@
-import React from 'react';
-import { UserContext } from '../../UserContext';
-import PhotoCommentsForm from './PhotoCommentsForm';
-import styles from './PhotoComments.module.css';
+import React from "react";
+import { UserContext } from "../../UserContext";
+import PhotoCommentsForm from "./PhotoCommentsForm";
+import styles from "./PhotoComments.module.css";
 
 const PhotoCommentes = (props) => {
   const { login } = React.useContext(UserContext);
@@ -15,7 +15,10 @@ const PhotoCommentes = (props) => {
   console.log(comments);
   return (
     <>
-      <ul className={styles.comments} ref={commentsSection}>
+      <ul
+        className={`${styles.comments} ${props.single ? styles.single : ""} `}
+        ref={commentsSection}
+      >
         {comments.map((comment) => (
           <li key={comment.comment_ID}>
             <b>
@@ -24,7 +27,13 @@ const PhotoCommentes = (props) => {
           </li>
         ))}
       </ul>
-      {login && <PhotoCommentsForm id={props.id} setComments={setComments} />}
+      {login && (
+        <PhotoCommentsForm
+          single={props.ingle}
+          id={props.id}
+          setComments={setComments}
+        />
+      )}
     </>
   );
 };
