@@ -1,12 +1,12 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import useForm from '../../Hooks/useForm';
-import Button from '../Forms/Button';
-import Input from '../Forms/Input';
-import { UserContext } from '../../UserContext';
-import Error from '../Helper/Error';
-import styles from './LoginForm.module.css';
-import stylesBtn from '../Forms/Button.module.css';
+import React from "react";
+import { Link } from "react-router-dom";
+import useForm from "../../Hooks/useForm";
+import Button from "../Forms/Button";
+import Input from "../Forms/Input";
+import { UserContext } from "../../UserContext";
+import Error from "../Helper/Error";
+import styles from "./LoginForm.module.css";
+import stylesBtn from "../Forms/Button.module.css";
 
 const LoginForm = () => {
   const username = useForm();
@@ -35,13 +35,13 @@ const LoginForm = () => {
         )}
         <Error error={error} />
       </form>
-      <Link className={styles.lost} to="/login/lost">
+      <Link className={styles.lost} to="/login/recuperar-password">
         Perdeu a senha?
       </Link>
       <div className={styles.signUp}>
         <h2 className={styles.subtitle}>Cadastre-se</h2>
         <p>Ainda não possui conta? Cadastre-se no site</p>
-        <Link className={stylesBtn.button} to="/login/signUp">
+        <Link className={stylesBtn.button} to="/login/cadastro">
           Cadastro
         </Link>
       </div>
