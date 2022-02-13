@@ -29,7 +29,7 @@ const PhotoCommentes = (props) => {
       </ul>
       {login && (
         <PhotoCommentsForm
-          single={props.ingle}
+          single={props.single}
           id={props.id}
           setComments={setComments}
         />
