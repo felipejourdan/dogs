@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <section className="container mainContainer">
       <Head
-        title="fotos"
+        title="Fotos"
         description="Dogs - A rede social boa pra cachorro!"
       />
       <Feed />
