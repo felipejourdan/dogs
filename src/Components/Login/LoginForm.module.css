@@ -10,7 +10,7 @@
 }
 
 .lost::after {
-  content: '';
+  content: "";
   height: 2px;
   width: 100%;
   background: currentColor;
@@ -19,6 +19,7 @@
 
 .signUp {
   margin-top: 4rem;
+  margin-bottom: 2rem;
 }
 .signUp p {
   margin-top: 2rem;
@@ -32,7 +33,7 @@
 }
 
 .subtitle::after {
-  content: '';
+  content: "";
   display: block;
   background: #ddd;
   height: 0.5rem;
