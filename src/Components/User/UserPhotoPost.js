@@ -43,8 +43,8 @@ const UserPhotoPost = () => {
 
   return (
     <section className={`${styles.photoPost} animeLeft`}>
-      <Head title="Poste sua Foto" />
       <form action="" onSubmit={handleSubmit}>
+        <Head title="Poste sua Foto" />
         <Input label="Nome" type="text" name="nome" {...nome} />
         <Input label="Peso" type="number" name="peso" {...peso} />
         <Input label="Idade" type="number" name="idade" {...idade} />
