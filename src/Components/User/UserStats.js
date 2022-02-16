@@ -26,7 +26,7 @@ const UserStats = () => {
         <UserStatsGraphs data={data} />
       </React.Suspense>
     );
-  } else return null;
+  } else return <div>Nenhum dado a ser mostrado</div>;
 };
 
 export default UserStats;

@@ -1,15 +1,15 @@
-import React from 'react';
-import { NavLink, useLocation } from 'react-router-dom';
-import { UserContext } from '../../UserContext';
-import { ReactComponent as MyPictures } from '../../Assets/feed.svg';
-import { ReactComponent as Stats } from '../../Assets/estatisticas.svg';
-import { ReactComponent as AddPhoto } from '../../Assets/adicionar.svg';
-import { ReactComponent as Logout } from '../../Assets/sair.svg';
-import styles from './UserHeaderNav.module.css';
-import useMedia from '../../Hooks/useMedia';
+import React from "react";
+import { NavLink, useLocation } from "react-router-dom";
+import { UserContext } from "../../UserContext";
+import { ReactComponent as MyPictures } from "../../Assets/feed.svg";
+import { ReactComponent as Stats } from "../../Assets/estatisticas.svg";
+import { ReactComponent as AddPhoto } from "../../Assets/adicionar.svg";
+import { ReactComponent as Logout } from "../../Assets/sair.svg";
+import styles from "./UserHeaderNav.module.css";
+import useMedia from "../../Hooks/useMedia";
 
 const UserHeaderNav = () => {
-  const mobile = useMedia('(max-width: 40rem)');
+  const mobile = useMedia("(max-width: 40rem)");
   const { userLogout } = React.useContext(UserContext);
   const [mobileMenu, setMobileMenu] = React.useState(false);
 
@@ -18,7 +18,7 @@ const UserHeaderNav = () => {
     setMobileMenu(false);
   }, [pathname]);
 
-  const { matches } = window.matchMedia('(max-width: 40rem)');
+  const { matches } = window.matchMedia("(max-width: 40rem)");
 
   return (
     <>
@@ -38,19 +38,19 @@ const UserHeaderNav = () => {
       >
         <NavLink to="/conta" end>
           <MyPictures />
-          {mobile && 'Minhas Fotos'}
+          {mobile && "Minhas Fotos"}
         </NavLink>
         <NavLink to="/conta/estatisticas">
           <Stats />
-          {mobile && 'Estatísticas'}
+          {mobile && "Estatísticas"}
         </NavLink>
         <NavLink to="/conta/postar">
           <AddPhoto />
-          {mobile && 'Adicionar foto'}
+          {mobile && "Adicionar foto"}
         </NavLink>
         <button onClick={userLogout}>
           <Logout />
-          {mobile && 'Sair'}
+          {mobile && "Sair"}
         </button>
       </nav>
     </>
