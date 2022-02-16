@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { UserContext } from "../../UserContext";
+import { UserContext } from "../../userContext";
 import Image from "../Helper/Image";
 import PhotoComments from "./PhotoComments";
 import styles from "./PhotoContent.module.css";

@@ -10,7 +10,7 @@ import NotFound from "./Components/NotFound";
 import Photo from "./Components/Photo/Photo";
 import User from "./Components/User/User";
 import UserProfile from "./Components/User/UserProfile";
-import { UserStorage } from "./UserContext";
+import { UserStorage } from "./userContext";
 
 function App() {
   return (

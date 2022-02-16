@@ -1,6 +1,6 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import { UserContext } from "../../UserContext";
+import { UserContext } from "../../userContext";
 import Feed from "../Feed/Feed";
 import Head from "../Helper/Head";
 import NotFound from "../NotFound";
